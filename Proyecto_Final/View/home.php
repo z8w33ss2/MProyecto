@@ -29,8 +29,8 @@
 				<div class="row">
 					<div class="col-md-6 d-flex align-items-center">
 						<p class="mb-0 phone pl-md-2">
-							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
-							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +506 222222</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> vet@email.com</a>
 						</p>
 					</div>
 					<div class="col-md-6 d-flex justify-content-md-end">
@@ -39,7 +39,7 @@
 			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
 			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
 			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    			
 			    		</p>
 		        </div>
 					</div>
@@ -59,15 +59,15 @@
 	        	<li class="nav-item"><a href="vet.html" class="nav-link">Veterinarian</a></li>
 	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+	          
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="iniciarSesion.php" class="nav-link">Inciar Sesión</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/portada2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">

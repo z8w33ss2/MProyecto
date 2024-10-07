@@ -2,6 +2,7 @@
 
 function MostrarMenu()
 {
+    // el echo imprime cosas en pantalla
     echo '
     <aside class="left-sidebar">
             <!-- Sidebar scroll-->

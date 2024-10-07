@@ -1,6 +1,8 @@
+
 <?php
-    include_once 'layout.php';
+    include_once 'layout.php'; // link que apunta a layout para poder llamar la funcion MostrarMenu()
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -18,8 +20,9 @@
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
 
+        
         <?php
-            MostrarMenu();
+            MostrarMenu(); // funcion que replica el menu en todas las vistas
         ?>
 
         <!--  Main wrapper -->
