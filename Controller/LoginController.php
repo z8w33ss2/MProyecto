@@ -20,4 +20,11 @@
         $contrasenna = $_POST["txtContrasenna"];
 
     }
+
+    if(isset($_POST["btnRecuperarAcceso"]))
+    {
+        //Código de acción
+        $correo = $_POST["txtCorreo"];
+
+    }
 ?>
