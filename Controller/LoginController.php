@@ -11,4 +11,13 @@
 
     }
 
+    if(isset($_POST["btnRegistrarUsuario"]))
+    {
+        //Código de acción
+        $identificacion = $_POST["txtIdentificacion"]; // En php se utiliza el name
+        $nombre = $_POST["txtNombre"];
+        $correo = $_POST["txtCorreo"];
+        $contrasenna = $_POST["txtContrasenna"];
+
+    }
 ?>

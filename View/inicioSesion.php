@@ -1,5 +1,4 @@
 <!--../ NOS DEVUELVE UNA CARPETA-->
-
 <?php
     include_once '../Controller/LoginController.php'; // link que apunta a LoginController
 ?>
@@ -29,7 +28,7 @@
                                 <a href="home.php" class="text-nowrap logo-img text-center d-block py-3 w-100">
                                     <img src="images/logo-light.svg" alt="">
                                 </a>
-                                <p class="text-center">Registro de Usuarios</p>
+                                <p class="text-center">Inicio de Sesión</p>
 
                                 <!--Formulario, debe de llevar un action"" para recargar la pantalla y un method="POST"
                                     para realizar una petición al servidor-->
