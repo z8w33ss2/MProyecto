@@ -1,6 +1,8 @@
 <!--../ NOS DEVUELVE UNA CARPETA-->
+<!--Un punto en php concatena cosas -->
+<!--include_once $_SERVER["DOCUMENT_ROOT"] . '/Proyecto_Clase/Controller/LoginController.php' -->
 <?php
-    include_once '../Controller/LoginController.php'; // link que apunta a LoginController
+    include_once '../Controller/LoginController.php'; // vista llama al controlador
 ?>
 
 <!doctype html>
