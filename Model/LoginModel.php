@@ -1,8 +1,31 @@
 <?php
 
-    function IniciarSesion($correo, $contrasenna)
+    include_once 'BaseDatos.php';
+
+    function IniciarSesionModel($correo, $contrasenna)
     {
-    echo "Vamos a la base de datos" ;
+        $enlace = AbrirBD();
+        
+        //Ejecutamos el procedimiento almacenado
+
+        CerrarBD($enlace);
     }
 
+    function RegistrarUsuarioModel($identificacion,$nombre,$correo,$contrasenna)
+    {
+        $enlace = AbrirBD();
+        
+        //Ejecutamos el procedimiento almacenado
+
+        CerrarBD($enlace);
+    }
+
+    function RecuperarAccesoModel($correo)
+    {
+        $enlace = AbrirBD();
+        
+        //Ejecutamos el procedimiento almacenado
+
+        CerrarBD($enlace);
+    }
 ?>

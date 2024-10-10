@@ -1,8 +1,6 @@
 <?php
-    include_once '../Model/LoginModel.php'; // Controlador llama al modelo
-?>
 
-<?php
+include_once '../Model/LoginModel.php'; // Controlador llama al modelo
 
     // echo $_SERVER["DOCUMENT_ROOT"]; muestra la ruta del origen
 
@@ -16,7 +14,7 @@
         $correo = $_POST["txtCorreo"]; // En php se utiliza el name
         $contrasenna = $_POST["txtContrasenna"];
 
-        IniciarSesion($correo, $contrasenna);
+        IniciarSesionModel($correo, $contrasenna);
 
     }
 
@@ -28,12 +26,15 @@
         $correo = $_POST["txtCorreo"];
         $contrasenna = $_POST["txtContrasenna"];
 
+        RegistrarUsuarioModel($identificacion,$nombre,$correo,$contrasenna);
     }
 
     if(isset($_POST["btnRecuperarAcceso"]))
     {
         //Código de acción
         $correo = $_POST["txtCorreo"];
+
+        RecuperarAccesoModel($correo);
 
     }
 ?>
