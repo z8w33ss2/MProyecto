@@ -1,6 +1,6 @@
 <?php
 
-include_once '../Model/LoginModel.php'; // Controlador llama al modelo
+include_once '../../Model/LoginModel.php'; // Controlador llama al modelo
 
     // echo $_SERVER["DOCUMENT_ROOT"]; muestra la ruta del origen
 

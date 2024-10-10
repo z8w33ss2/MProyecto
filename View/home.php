@@ -1,6 +1,7 @@
 
 <?php
     include_once 'layout.php'; // link que apunta a layout para poder llamar la funcion MostrarMenu()
+
 ?>
 
 
@@ -22,6 +23,7 @@
 
         
         <?php
+          
             MostrarMenu(); // funcion que replica el menu en todas las vistas
         ?>
 
@@ -64,7 +66,7 @@
                                             <i class="ti ti-list-check fs-6"></i>
                                             <p class="mb-0 fs-3">My Task</p>
                                         </a>
-                                        <a href="inicioSesion.php"
+                                        <a href="Login/inicioSesion.php"
                                             class="btn btn-outline-primary mx-3 mt-2 d-block">Iniciar Sesión</a>
                                     </div>
                                 </div>
