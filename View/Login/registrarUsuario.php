@@ -12,6 +12,7 @@
     <title>Proyecto Web Miércoles</title>
     <link rel="shortcut icon" type="image/png" href="images/seodashlogo.png" />
     <link rel="stylesheet" href="../css/styles.min.css" />
+    <link rel="stylesheet" href="../css/sistema.css" />
 </head>
 
 <body>
@@ -29,7 +30,15 @@
                                     <img src="../images/logo-light.svg" alt="">
                                 </a>
                                 <p class="text-center">Registro de usuarios</p>
-                                <!---->
+                                <!--Mensaje en PHP que le indica al usuario por que no se pudo registrar-->
+                                <?php
+                                    // si la variable post esta seteada con un mensaje 
+                                    if(isset($_POST["txtMensaje"]))
+                                    {
+                                        // Clase de bootstrap alert
+                                        echo '<div class="alert alert-info Centrado ">' . $_POST["txtMensaje"] . '</div>';
+                                    }
+                                ?>
                                 <!-- El form debe de llevar un action vacio y un method de tipo POST-->
                                 <form action="" method="POST">
                                     <!---->

@@ -13,16 +13,24 @@
 
     function RegistrarUsuarioModel($identificacion,$nombre,$correo,$contrasenna)
     {
-        // Llama a la función que abre la base de datos
-        $enlace = AbrirBD();
+        try {
+            // Llama a la función que abre la base de datos
+            $enlace = AbrirBD();
         
-        //Ejecutamos el procedimiento almacenado
-        $sentencia = "CALL RegistrarUsuario('$identificacion','$nombre','$correo','$contrasenna')" ;
-        // todo llamado a base de datos debe de devolver un resultado
-        $result = $enlace -> query($sentencia);
+            //Ejecutamos el procedimiento almacenado
+            $sentencia = "CALL RegistrarUsuario('$identificacion','$nombre','$correo','$contrasenna')" ;
+            // todo llamado a base de datos debe de devolver un resultado
+            $result = $enlace -> query($sentencia);
 
-        // llama a la funcion que cierra la base de datos
-        CerrarBD($enlace);  
+            // llama a la funcion que cierra la base de datos
+            CerrarBD($enlace); 
+            return $result; 
+
+        } catch (Exception $ex) {
+            return false;
+        }
+        
+        
     }
 
     function RecuperarAccesoModel($correo)

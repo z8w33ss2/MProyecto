@@ -1,8 +1,8 @@
 <?php
 
-include_once '../../Model/LoginModel.php'; // Controlador llama al modelo
+include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Model/LoginModel.php'; // Controlador llama al modelo
 
-    // echo $_SERVER["DOCUMENT_ROOT"]; muestra la ruta del origen
+    //echo $_SERVER["DOCUMENT_ROOT"]; //muestra la ruta del origen
 
     // isset pregunta si hay una peticion hecha a $_POST["btnIniciarSesion"]
     // $_POST["name"] es el conjunto de datos que estan viajando desde la vista hasta el controlador
@@ -10,6 +10,7 @@ include_once '../../Model/LoginModel.php'; // Controlador llama al modelo
     
     if(isset($_POST["btnIniciarSesion"]))
     {
+        
         //Código de acción
         $correo = $_POST["txtCorreo"]; // En php se utiliza el name
         $contrasenna = $_POST["txtContrasenna"];
@@ -26,7 +27,16 @@ include_once '../../Model/LoginModel.php'; // Controlador llama al modelo
         $correo = $_POST["txtCorreo"];
         $contrasenna = $_POST["txtContrasenna"];
 
-        RegistrarUsuarioModel($identificacion,$nombre,$correo,$contrasenna);
+        $result = RegistrarUsuarioModel($identificacion,$nombre,$correo,$contrasenna);
+
+        if($result == true)
+        {
+            header('location: ../Login/inicioSesion.php');
+        }
+        else
+        {
+            $_POST["txtMensaje"]= "Su información no se ha registrado correctamente";
+        }
     }
 
     if(isset($_POST["btnRecuperarAcceso"]))
