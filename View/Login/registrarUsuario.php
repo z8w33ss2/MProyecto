@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Proyecto Web Miércoles</title>
-    <link rel="shortcut icon" type="image/png" href="images/seodashlogo.png" />
+    <link rel="shortcut icon" type="image/png" href="../images/seodashlogo.png" />
     <link rel="stylesheet" href="../css/styles.min.css" />
     <link rel="stylesheet" href="../css/sistema.css" />
 </head>
@@ -47,7 +47,9 @@
                                         <label class="form-label">Identificación</label>
                                         <!---->
                                         <input type="text" class="form-control" id="txtIdentificacion"
-                                            name="txtIdentificacion">
+                                            name="txtIdentificacion" onclick="Saludar()">
+                                        <!--Evento de javaScript onclick="Saludar"-->
+    
                                     </div>
 
                                     <div class="mb-3">
@@ -86,9 +88,12 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <!--los JavaScript se deben de programar aparte y se hace el llamado-->
+    <script src="../js/registrarUsuario.js"></script>
 </body>
 
 </html>
