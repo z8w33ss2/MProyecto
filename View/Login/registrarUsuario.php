@@ -1,6 +1,6 @@
 <!--../ NOS DEVUELVE UNA CARPETA-->
 <?php
-    include_once '../../Controller/LoginController.php'; // link que apunta a LoginController
+    include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/LoginController.php'; // vista llama al controlador
 ?>
 
 <!doctype html>

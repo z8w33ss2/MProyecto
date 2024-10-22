@@ -2,7 +2,7 @@
 <!--Un punto en php concatena cosas -->
 <!--include_once $_SERVER["DOCUMENT_ROOT"] . '/Proyecto_Clase/Controller/LoginController.php' -->
 <?php
-    include_once '../../Controller/LoginController.php'; // vista llama al controlador
+    include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/LoginController.php'; // vista llama al controlador
 ?>
 
 <!doctype html>
@@ -14,6 +14,7 @@
     <title>Proyecto Web Miércoles</title>
     <link rel="shortcut icon" type="image/png" href="images/seodashlogo.png" />
     <link rel="stylesheet" href="../css/styles.min.css" />
+    <link rel="stylesheet" href="../css/sistema.css" />
 </head>
 
 <body>
@@ -32,9 +33,18 @@
                                 </a>
                                 <p class="text-center">Inicio de Sesión</p>
 
+                                <!--Mensaje en PHP que le indica al usuario por que no se pudo registrar-->
+                                <?php
+                                    // si la variable post esta seteada con un mensaje 
+                                    if(isset($_POST["txtMensaje"]))
+                                    {
+                                        // Clase de bootstrap alert
+                                        echo '<div class="alert alert-info Centrado ">' . $_POST["txtMensaje"] . '</div>';
+                                    }
+                                ?>
                                 <!--Formulario, debe de llevar un action"" para recargar la pantalla y un method="POST"
                                     para realizar una petición al servidor-->
-                                <form action="" method="POST" >
+                                <form action="" method="POST">
                                     <div class="mb-3">
                                         <label class="form-label">Correo Electrónico</label>
                                         <input type="email" class="form-control" id="txtCorreo" name="txtCorreo">
@@ -43,7 +53,8 @@
                                         <!--Las cajitas de texto deben de llevar un id y un name, el id me sirve para 
                                             programar funciones en JavaScript y el name para programar funciones en PHP-->
                                         <label class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" id=txtContrasenna name=txtContrasenna>
+                                        <input type="password" class="form-control" id=txtContrasenna
+                                            name=txtContrasenna>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mb-4">
                                         <div class="form-check">
@@ -54,8 +65,8 @@
                                     </div>
 
                                     <!--Input de tipo submit-->
-                                    <input type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4" value = "Procesar"
-                                    id=btnIniciarSesion name=btnIniciarSesion>
+                                    <input type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4" value="Procesar"
+                                        id=btnIniciarSesion name=btnIniciarSesion>
 
                                     <div class="d-flex align-items-center justify-content-center">
                                         <p class="fs-4 mb-0 fw-bold">No tienes una cuenta</p>
