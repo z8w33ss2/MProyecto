@@ -8,7 +8,7 @@
             $enlace = AbrirBD();
         
             //Ejecutamos el procedimiento almacenado (Select me devuelve un objeto y se retorna null)
-            $sentencia = "CALL IniciarSesion('$correo','$contrasenna')" ;
+            $sentencia = "CALL IniciarSesion('$correo','$contrasenna')" ; // SELECT devuelve un objeto
             // todo llamado a base de datos debe de devolver un resultado
             $result = $enlace -> query($sentencia);
 
@@ -17,7 +17,7 @@
             return $result; 
 
         } catch (Exception $ex) {
-            return null;
+            return null; // 
         }  
     }
 
@@ -28,7 +28,7 @@
             $enlace = AbrirBD();
         
             //Ejecutamos el procedimiento almacenado (Insert, update y delete deviuelve una sentencia)
-            $sentencia = "CALL RegistrarUsuario('$identificacion','$nombre','$correo','$contrasenna')" ;
+            $sentencia = "CALL RegistrarUsuario('$identificacion','$nombre','$correo','$contrasenna')" ; // CREATE, UPDATE, DELETE devuelve true or false
             // todo llamado a base de datos debe de devolver un resultado
             $result = $enlace -> query($sentencia);
 

@@ -21,14 +21,14 @@
 
         $result = IniciarSesionModel($correo, $contrasenna);
 
-        // result.num_rows
+        // result.num_rows para saber si encontro registros
         if($result != null && $result -> num_rows > 0)
         {
             // guarda los datos en la variable datos para manipular el array
             $datos = mysqli_fetch_array($result);
 
             $_SESSION["NombreUsuario"]= $datos["Nombre"]; // variable de sesion en el servidor
-            header('location: '. $SERVER["DOCUMENT_ROOT"]. '/Proyecto_Clase/View/home.php');
+            header('location: ../../View/home.php');
         }
         else
         {
@@ -41,7 +41,7 @@
     // php tomamos el name - Condicional para cerrar sesion
     if (isset($_POST["btnCerrarSesion"])) {
         session_destroy();
-        header('location: '. $SERVER["DOCUMENT_ROOT"]. '/Proyecto_Clase/View/home.php');
+        header('location: ../View/home.php');
     }
 
     if(isset($_POST["btnRegistrarUsuario"]))
@@ -56,7 +56,7 @@
 
         if($result == true)
         {
-            header('location: '. $SERVER["DOCUMENT_ROOT"]. '/Proyecto_Clase/View/Login/inicioSesion.php');
+            header('location: ../../View/Login/inicioSesion.php');
         }
         else
         {

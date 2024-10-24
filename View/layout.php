@@ -69,8 +69,8 @@ function MostrarMenu()
 function MostrarHeader()
     {
     // Condicional que evalua si se encuentra loggueado
-    $usuario = "Invitado";
-    if (isset($_SESSION["NombreUsuario"])) {
+    $usuario = "Invitado"; 
+    if (isset($_SESSION["NombreUsuario"])) { // variable de sesion
         $usuario = $_SESSION["NombreUsuario"];
     }
         echo '            
