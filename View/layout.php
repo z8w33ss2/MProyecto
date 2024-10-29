@@ -14,7 +14,7 @@ function MostrarMenu()
                 <div>
                     <div class="brand-logo d-flex align-items-center justify-content-between">
                         <a href="home.php" class="text-nowrap logo-img">
-                            <img src="images/logo-light.svg" alt="" />
+                            <img src="../images/logo-light.svg" alt="" />
                         </a>
                         <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                             <i class="ti ti-x fs-8"></i>
@@ -40,7 +40,7 @@ function MostrarMenu()
                                 <span class="hide-menu">Mantenimientos</span>
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="consultaUsuarios.php" aria-expanded="false">
+                                <a class="sidebar-link" href="consultarUsuarios.php" aria-expanded="false">
                                     <span>
                                         <iconify-icon icon="solar:layers-minimalistic-bold-duotone" class="fs-6">
                                         </iconify-icon>
@@ -91,40 +91,36 @@ function MostrarHeader()
 
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/user-1.jpg" alt="" width="35" height="35"
+                                    <img src="../images/user-1.jpg" alt="" width="35" height="35"
                                         class="rounded-circle">
 
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
                                     aria-labelledby="drop2">
-                                    <div class="message-body">
-                                        <a href="javascript:void(0)"
-                                            class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-user fs-6"></i>
-                                            <p class="mb-0 fs-3">My Profile</p>
-                                        </a>
-                                        <a href="javascript:void(0)"
-                                            class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-mail fs-6"></i>
-                                            <p class="mb-0 fs-3">My Account</p>
-                                        </a>
-                                        <a href="javascript:void(0)"
-                                            class="d-flex align-items-center gap-2 dropdown-item">
-                                            <i class="ti ti-list-check fs-6"></i>
-                                            <p class="mb-0 fs-3">My Task</p>
-                                        </a>';
+                                    <div class="message-body">';
 
                                         if (isset($_SESSION["NombreUsuario"])) {
-                                            //botones de tipo submit necesitan un formulario un id y un name para funcionar
+                                            // botones de tipo submit necesitan un formulario un id y un name para funcionar
+                                            // muestra perfil, tareas y usuario solo cuando me encuentro loggueado
                                             echo '
-                                            <form action="" method="POST"> 
-                                                <button type="submit" style="width:150px" id="btnCerrarSesion" name="btnCerrarSesion"
-                                                    class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar Sesión</button>
-                                            </form>';    
+                                                <a href="javascript:void(0)"
+                                                    class="d-flex align-items-center gap-2 dropdown-item">
+                                                    <i class="ti ti-user fs-6"></i>
+                                                    <p class="mb-0 fs-3">Mi Perfil</p>
+                                                </a>
+                                                <a href="Usuario/cambiarAcceso.php"
+                                                    class="d-flex align-items-center gap-2 dropdown-item">
+                                                    <i class="ti ti-list-check fs-6"></i>
+                                                    <p class="mb-0 fs-3">Seguridad</p>
+                                                </a>
+                                                <form action="" method="POST"> 
+                                                    <button type="submit" style="width:150px" id="btnCerrarSesion" name="btnCerrarSesion"
+                                                        class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar Sesión</button>
+                                                </form>';    
                                         }else{
                                             echo ' 
-                                            <a href="Login/inicioSesion.php" style="width:150px"
-                                                class="btn btn-outline-primary mx-3 mt-2 d-block">Iniciar Sesión</a>';
+                                                <a href="Login/inicioSesion.php" style="width:150px"
+                                                    class="btn btn-outline-primary mx-3 mt-2 d-block">Iniciar Sesión</a>';
                                         }
                                         echo'
                                     </div>
