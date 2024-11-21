@@ -28,7 +28,7 @@ function MostrarMenu()
                                 <span class="hide-menu">Home</span>
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                                <a class="sidebar-link" href=" ../Login/home.php" aria-expanded="false">
                                     <span>
                                         <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
                                     </span>
@@ -40,7 +40,7 @@ function MostrarMenu()
                                 <span class="hide-menu">Mantenimientos</span>
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="consultarUsuarios.php" aria-expanded="false">
+                                <a class="sidebar-link" href=" ../Usuario/consultarUsuarios.php" aria-expanded="false">
                                     <span>
                                         <iconify-icon icon="solar:layers-minimalistic-bold-duotone" class="fs-6">
                                         </iconify-icon>
@@ -103,12 +103,12 @@ function MostrarHeader()
                                             // botones de tipo submit necesitan un formulario un id y un name para funcionar
                                             // muestra perfil, tareas y usuario solo cuando me encuentro loggueado
                                             echo '
-                                                <a href="javascript:void(0)"
+                                                <a href="../Usuario/consultarPerfil.php"
                                                     class="d-flex align-items-center gap-2 dropdown-item">
                                                     <i class="ti ti-user fs-6"></i>
                                                     <p class="mb-0 fs-3">Mi Perfil</p>
                                                 </a>
-                                                <a href="Usuario/cambiarAcceso.php"
+                                                <a href="../Usuario/cambiarAcceso.php"
                                                     class="d-flex align-items-center gap-2 dropdown-item">
                                                     <i class="ti ti-list-check fs-6"></i>
                                                     <p class="mb-0 fs-3">Seguridad</p>
@@ -119,7 +119,7 @@ function MostrarHeader()
                                                 </form>';    
                                         }else{
                                             echo ' 
-                                                <a href="Login/inicioSesion.php" style="width:150px"
+                                                <a href=" inicioSesion.php" style="width:150px"
                                                     class="btn btn-outline-primary mx-3 mt-2 d-block">Iniciar Sesión</a>';
                                         }
                                         echo'

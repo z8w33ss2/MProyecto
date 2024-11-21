@@ -29,7 +29,9 @@
             $datos = mysqli_fetch_array($result);
 
             $_SESSION["NombreUsuario"]= $datos["Nombre"]; // variable de sesion en el servidor
-            header('location: ../../View/home.php');
+            $_SESSION["ConsecutivoUsuario"] = $datos["Consecutivo"]; // variable de sesion que guarda el consecutivo
+            
+            header('location: ../../View/Login/home.php');
         }
         else
         {
@@ -42,7 +44,7 @@
     // php tomamos el name - Condicional para cerrar sesion
     if (isset($_POST["btnCerrarSesion"])) {
         session_destroy();
-        header('location: ../View/home.php');
+        header('location: ../Login/home.php');
     }
 
     if(isset($_POST["btnRegistrarUsuario"]))
