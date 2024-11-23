@@ -32,9 +32,14 @@ function MostrarMenu()
                                     <span>
                                         <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
                                     </span>
-                                    <span class="hide-menu">Dashboard</span>
+                                    <span class="hide-menu">Inicio</span>
                                 </a>
-                            </li>
+                            </li>';
+
+                            // muestra mantenimientos solo cuando me encuentro loggueado y el consecutivo de Rol sea de admnitrador
+                            if (isset($_SESSION["NombreUsuario"]) && $_SESSION["ConsecutivoRolUsuario"] == "1") {
+                                echo '
+
                             <li class="nav-small-cap">
                                 <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
                                 <span class="hide-menu">Mantenimientos</span>
@@ -55,7 +60,9 @@ function MostrarMenu()
                                     </span>
                                     <span class="hide-menu">Alerts</span>
                                 </a>
-                            </li>
+                            </li>';
+                        }
+                        echo '
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->

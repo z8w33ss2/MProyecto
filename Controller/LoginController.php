@@ -30,7 +30,8 @@
 
             $_SESSION["NombreUsuario"]= $datos["Nombre"]; // variable de sesion en el servidor
             $_SESSION["ConsecutivoUsuario"] = $datos["Consecutivo"]; // variable de sesion que guarda el consecutivo
-            
+            $_SESSION["ConsecutivoRolUsuario"] = $datos["ConsecutivoRol"];
+
             header('location: ../../View/Login/home.php');
         }
         else

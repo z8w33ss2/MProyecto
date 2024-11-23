@@ -47,7 +47,7 @@
                                         <label class="form-label">Identificación</label>
                                         <!---->
                                         <input type="text" class="form-control" id="txtIdentificacion"
-                                            name="txtIdentificacion" onclick="Saludar()">
+                                            name="txtIdentificacion" > <!--onclick="Saludar()"-->
                                         <!--Evento de javaScript onclick="Saludar"-->
     
                                     </div>
@@ -93,7 +93,7 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <!--los JavaScript se deben de programar aparte y se hace el llamado-->
-    <script src="../js/registrarUsuario.js"></script>
+    <script src="../js/registrarUsuarios.js"></script>
 </body>
 
 </html>

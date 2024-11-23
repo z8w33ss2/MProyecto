@@ -82,4 +82,15 @@
         }
     }
     
+    function ConsultarUsuarios()
+    {
+        $result = ConsultarUsuariosModel(); // consecutivo como variable de sesion
+
+        // result.num_rows para saber si encontro registros
+        if($result != null && $result -> num_rows > 0)
+        {
+            // devuelve los resultados
+            return $result;
+        }
+    }
 ?>
