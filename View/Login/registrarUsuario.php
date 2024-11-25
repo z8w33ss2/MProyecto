@@ -93,7 +93,7 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <!--los JavaScript se deben de programar aparte y se hace el llamado-->
-    <script src="../js/registrarUsuarios.js"></script>
+    <script src="../js/RegistrarUsuarios.js"></script>
 </body>
 
 </html>

@@ -84,7 +84,7 @@
     
     function ConsultarUsuarios()
     {
-        $result = ConsultarUsuariosModel(); // consecutivo como variable de sesion
+        $result = ConsultarUsuariosModel($_SESSION["ConsecutivoUsuario"]); // consecutivo como variable de sesion para que solo muestre la informacion de otros usuarios
 
         // result.num_rows para saber si encontro registros
         if($result != null && $result -> num_rows > 0)
@@ -93,4 +93,23 @@
             return $result;
         }
     }
+
+    if(isset($_POST["btnCambiarEstadoUsuario"]))
+    {
+        //Código de acción
+        $consecutivo = $_POST["txtConsecutivo"]; // En php se utiliza el name
+
+        $result = CambiarEstadoUsuarioModel($consecutivo);
+
+        if($result == true)
+        {
+            // Sobre escribe la variable de sesion
+            header('location: ../../View/Usuario/consultarUsuarios.php');
+        }
+        else
+        {
+            $_POST["txtMensaje"]= "No fue posible actualizar el estado del usuario";
+        }
+    }
+    
 ?>
