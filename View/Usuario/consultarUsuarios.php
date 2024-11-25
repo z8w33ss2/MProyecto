@@ -5,7 +5,7 @@
 
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -77,9 +77,10 @@
                                                         // id del modal = #staticBackdrop
                                                         // data-id='.$datos["Consecutivo"].' le pasa el consecutivo al modal
                                                         // ' data-name='.$datos["Nombre"].' le pasa el nombre al modal
+                                                        // queryString paso de parametros entre pantallas href="actualizarUsuario.php?id="'.$fila["Consecutivo"].'
                                                         echo '<td>
-
-                                                            <a href="actualizarUsuario.php" class="btn">
+                                                            
+                                                            <a href="actualizarUsuario.php?id=' . $fila["Consecutivo"] . '" class="btn">
                                                                 <i class="fa fa-edit" style="color:blue; font-size: 1.4em"></i>
                                                             </a> 
 

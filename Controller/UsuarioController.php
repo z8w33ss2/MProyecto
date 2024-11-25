@@ -43,9 +43,10 @@
     }
 
     // si no hay boton de por medio se llama a la funcion
-    function ConsultarUsuario()
+    // se pasa como parametro el consecutivo ya sea de sesion o de ID
+    function ConsultarUsuario($consecutivo)
     {
-        $result = ConsultarUsuarioModel( $_SESSION["ConsecutivoUsuario"]); // consecutivo como variable de sesion
+        $result = ConsultarUsuarioModel($consecutivo); // consecutivo como variable de sesion o id
 
         // result.num_rows para saber si encontro registros
         if($result != null && $result -> num_rows > 0)
