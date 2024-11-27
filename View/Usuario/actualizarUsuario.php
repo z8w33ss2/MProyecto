@@ -11,13 +11,9 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistema Web Miércoles Noche</title>
-    <link rel="shortcut icon" type="image/png" href="../images/seodashlogo.png" />
-    <link rel="stylesheet" href="../css/styles.min.css" />
-</head>
+<?php
+    ReferenciasCSS();
+?>
 
 <body class="page-wrapper">
     <!--  Body Wrapper -->
@@ -63,7 +59,8 @@
                                         <div class="mb-3">
                                             <label class="form-label">Identificación</label>
                                             <input type="text" class="form-control" id="txtIdentificacion"
-                                                name="txtIdentificacion" value="<?php echo $datos["Identificacion"]?>">
+                                                name="txtIdentificacion" value="<?php echo $datos["Identificacion"]?>"
+                                                onkeyup="ConsultarNombre();">
                                                 <!--value= obtiene los valores de la base de datos -->
                                         </div>
 
@@ -114,12 +111,10 @@
                 </div>
             </div>
         </div>
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="../js/simplebar.js"></script>
-        <script src="../js/sidebarmenu.js"></script>
-        <script src="../js/app.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <?php
+        ReferenciasJS();
+    ?>
+    <script src="../js/RegistrarUsuarios.js"></script>
 </body>
 
 </html>

@@ -7,17 +7,9 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistema Web Miércoles Noche</title>
-    <link rel="shortcut icon" type="image/png" href="../images/seodashlogo.png" />
-    <link rel="stylesheet" href="../css/styles.min.css" />
-    <!--datatable-->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
-    <!--Icons font-awesome 4.7 free-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />" />
-</head>
+<?php
+    ReferenciasCSS();
+?>
 
 <body class="page-wrapper">
     <!--  Body Wrapper -->
@@ -104,20 +96,12 @@
                 </div>
             </div>
         </div>
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="../js/simplebar.js"></script>
-        <script src="../js/sidebarmenu.js"></script>
-        <script src="../js/app.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-        <!--js de datatable-->
-        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
-        <!--js de datatable-->
-        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
-        <!--js de datatable-->
+        
+        <?php
+            ReferenciasJS();
+        ?>
         <script src="../js/ConsultarUsuarios.js"></script>
-        <!--js de datatable-->
-
+        
         <!-- Modal , se coloca en esta parte para que quede oculto-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
