@@ -3,8 +3,8 @@
     include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/UsuarioController.php';  
 
     // captura el id que viaja por el queryString y lo pasa como parametro a la función
-    $id = $_GET ["id"]
-    $datos = ConsultarUsuario();
+    $id = $_GET ["id"];
+    $datos = ConsultarUsuario($id);
 ?>
 
 
@@ -57,10 +57,13 @@
 
                                     <form action="" method="POST">
 
+                                        <!--cajita de text oculpa para enviar el id de sesion-->
+                                        <input type="hidden" id="txtConsecutivo" name="txtConsecutivo" value="<?php echo $datos["Consecutivo"]?>">
+
                                         <div class="mb-3">
                                             <label class="form-label">Identificación</label>
                                             <input type="text" class="form-control" id="txtIdentificacion"
-                                                name="txtIdentificacion" value=<?php echo $datos["Identificacion"]?>>
+                                                name="txtIdentificacion" value="<?php echo $datos["Identificacion"]?>">
                                                 <!--value= obtiene los valores de la base de datos -->
                                         </div>
 
@@ -68,23 +71,39 @@
                                         <div class="mb-3">
                                             <label class="form-label">Nombre</label>
                                             <input type="text" class="form-control" id="txtNombre" name="txtNombre"
-                                                value=<?php echo $datos["Nombre"]?>>
+                                                value="<?php echo $datos["Nombre"]?>">
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Correo Electrónico</label>
                                             <input type="email" class="form-control" id="txtCorreo" name="txtCorreo"
-                                                value=<?php echo $datos["CorreoElectronico"]?>>
+                                                value="<?php echo $datos["CorreoElectronico"]?>">
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Rol</label>
-                                            <input type="text" class="form-control" id="txtRol" name="txtRol" readOnly="true"
-                                                style="background-color:#f1f1f1" value="<?php echo $datos["NombreRol"]?>">
+                                            <select id="ddlRoles" name="ddlRoles" class="form-control">
+                                                <?php
+                                                    $roles = ConsultarRoles(); // llama al controlador 
+                                                    echo "<option value=''>Seleccione</option>"; 
+                                                    While ($fila = mysqli_fetch_array($roles)) 
+                                                        {
+                                                            //si el consecutivoRol es igual al consecutivo con la propiedad selected muestra el rol actual
+                                                            if($fila["Consecutivo"] == $datos["ConsecutivoRol"])
+                                                            {
+                                                                echo "<option selected value=" . $fila["Consecutivo"] . ">" . $fila["NombreRol"] ."</option>"; 
+                                                            }
+                                                            else
+                                                            {
+                                                                echo "<option value=" . $fila["Consecutivo"] . ">" . $fila["NombreRol"] ."</option>"; 
+                                                            }
+                                                        }
+                                                ?>
+                                            </select>
                                         </div>
 
                                         <input type="submit" class="btn btn-primary" value="Procesar"
-                                            id="btnActualizarPerfil" name="btnActualizarPerfil">
+                                            id="btnActualizarUsuario" name="btnActualizarUsuario">
                                         <!--  ID para javaScrip - NAME para PHP-->
                                     </form>
                                 </div>

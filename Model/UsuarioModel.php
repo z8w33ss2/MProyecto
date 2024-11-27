@@ -21,14 +21,14 @@
         }
     }
 
-    function ActualizarPerfilModel($consecutivo, $identificacion, $nombre,$correo)
+    function ActualizarPerfilModel($consecutivo, $identificacion, $nombre, $correo, $rol)
     {
         try {
             // Llama a la función que abre la base de datos
             $enlace = AbrirBD();
         
             //Ejecutamos el procedimiento almacenado (Select me devuelve un objeto y se retorna null)
-            $sentencia = "CALL ActualizarPerfil('$consecutivo','$identificacion','$nombre','$correo')" ; // SELECT devuelve un objeto
+            $sentencia = "CALL ActualizarPerfil('$consecutivo','$identificacion','$nombre','$correo','$rol')" ; // SELECT devuelve un objeto
             // todo llamado a base de datos debe de devolver un resultado
             $result = $enlace -> query($sentencia);
 
@@ -79,6 +79,26 @@
 
         } catch (Exception $ex) {
             return false; // SELECT devuelve un objeto
+        }
+    }
+
+    function ConsultarRolesModel()
+    {
+        try {
+            // Llama a la función que abre la base de datos
+            $enlace = AbrirBD();
+        
+            //Ejecutamos el procedimiento almacenado (Select me devuelve un objeto y se retorna null)
+            $sentencia = "CALL ConsultarRoles()" ; // SELECT devuelve un objeto
+            // todo llamado a base de datos debe de devolver un resultado
+            $result = $enlace -> query($sentencia);
+
+            // llama a la funcion que cierra la base de datos
+            CerrarBD($enlace); 
+            return $result; 
+
+        } catch (Exception $ex) {
+            return null; // SELECT devuelve un objeto
         }
     }
 ?>

@@ -3,7 +3,7 @@
     include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/UsuarioController.php';  
 
     // captura el id de la sesion 
-    $id = $_SESSION["ConsecutivoUsuario"]
+    $id = $_SESSION["ConsecutivoUsuario"];
     $datos = ConsultarUsuario($id);
 ?>
 
@@ -60,7 +60,7 @@
                                         <div class="mb-3">
                                             <label class="form-label">Identificación</label>
                                             <input type="text" class="form-control" id="txtIdentificacion"
-                                                name="txtIdentificacion" value=<?php echo $datos["Identificacion"]?>>
+                                                name="txtIdentificacion" value="<?php echo $datos["Identificacion"]?>">
                                                 <!--value= obtiene los valores de la base de datos -->
                                         </div>
 
@@ -68,13 +68,13 @@
                                         <div class="mb-3">
                                             <label class="form-label">Nombre</label>
                                             <input type="text" class="form-control" id="txtNombre" name="txtNombre"
-                                                value=<?php echo $datos["Nombre"]?>>
+                                                value="<?php echo $datos["Nombre"]?>">
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Correo Electrónico</label>
                                             <input type="email" class="form-control" id="txtCorreo" name="txtCorreo"
-                                                value=<?php echo $datos["CorreoElectronico"]?>>
+                                                value="<?php echo $datos["CorreoElectronico"]?>">
                                         </div>
 
                                         <div class="mb-3">
