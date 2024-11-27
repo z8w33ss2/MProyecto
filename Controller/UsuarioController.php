@@ -107,14 +107,7 @@
     
     function ConsultarUsuarios()
     {
-        $result = ConsultarUsuariosModel($_SESSION["ConsecutivoUsuario"]); // consecutivo como variable de sesion para que solo muestre la informacion de otros usuarios
-
-        // result.num_rows para saber si encontro registros
-        if($result != null && $result -> num_rows > 0)
-        {
-            // devuelve los resultados
-            return $result;
-        }
+        return ConsultarUsuariosModel($_SESSION["ConsecutivoUsuario"]); // consecutivo como variable de sesion para que solo muestre la informacion de otros usuarios
     }
 
     if(isset($_POST["btnCambiarEstadoUsuario"]))
@@ -137,14 +130,7 @@
 
     function ConsultarRoles()
     {
-        $result = ConsultarRolesModel(); 
-
-        // result.num_rows para saber si encontro registros
-        if($result != null && $result -> num_rows > 0)
-        {
-            // devuelve los resultados
-            return $result;
-        }
+        return ConsultarRolesModel(); 
     }
     
 ?>

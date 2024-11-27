@@ -54,11 +54,11 @@ function MostrarMenu()
                                 </a>
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+                                <a class="sidebar-link" href="../Producto/consultarProductos.php" aria-expanded="false">
                                     <span>
-                                        <iconify-icon icon="solar:danger-circle-bold-duotone" class="fs-6"></iconify-icon>
+                                        <iconify-icon icon="solar:shop-minimalistic-bold" class="fs-6"></iconify-icon>
                                     </span>
-                                    <span class="hide-menu">Alerts</span>
+                                    <span class="hide-menu">Productos</span>
                                 </a>
                             </li>';
                         }
