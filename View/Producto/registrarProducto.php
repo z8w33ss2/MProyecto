@@ -47,30 +47,35 @@
                                         echo '<div class="alert alert-info Centrado ">' . $_POST["txtMensaje"] . '</div>';
                                     }
                                 ?>
-
-                                    <form action="" method="POST">
+                                    <!--enctype="multipart/form-data" para el envio de imagenes hacia el controlador-->
+                                    <form action="" method="POST" enctype="multipart/form-data">
 
                                         <div class="mb-3">
                                             <label class="form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="txNombre" name="txtNombre">
+                                            <input type="text" class="form-control" id="txNombre" name="txtNombre" required>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Descripción</label>
-                                            <input type="text" class="form-control" id="txtDescripcion" name="txtDescripcion">
+                                            <textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea required>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Precio</label>
-                                            <input type="text" class="form-control" id="txtPrecio" name="txtPrecio">
+                                            <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" required>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Cantidad</label>
-                                            <input type="text" class="form-control" id="txtCantidad" name="txtCantidad">
+                                            <input type="text" class="form-control" id="txtCantidad" name="txtCantidad" required>
                                         </div>
 
-                                        
+                                        <!--accept="image/png" realiza un filtro para imagenes-->
+                                        <div class="mb-3">
+                                            <label class="form-label">Imagen</label>
+                                            <input type="file" class="form-control" id="txtImagen" name="txtImagen"
+                                            accept="image/png">
+                                        </div>
 
                                         <input type="submit" class="btn btn-primary" value="Procesar"
                                             id="btnRegistrarProducto" name="btnRegistrarProducto">

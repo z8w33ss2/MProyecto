@@ -1,5 +1,6 @@
 <!--../ NOS DEVUELVE UNA CARPETA-->
 <?php
+        include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/View/layoutExterno.php';  // link que apunta a layout para poder llamar la funcion MostrarMenu()
     include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/LoginController.php'; // vista llama al controlador
 ?>
 

@@ -1,5 +1,6 @@
 <?php
     include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/View/layout.php';  // link que apunta a layout para poder llamar la funcion MostrarMenu()
+    include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/ProductoController.php';
 ?>
 
 
@@ -10,9 +11,9 @@
     ReferenciasCSS();
 ?>
 
-<body>
+<body class="page-wrapper">
     <!--  Body Wrapper -->
-    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    <div  id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
 
 
@@ -39,7 +40,32 @@
                             echo '<div class="alert alert-info Centrado ">' . $_POST["txtMensaje"] . '</div>';
                         }
                     ?>
-                    
+                    <div class="row">
+                        <?php
+                        // Row mide 12
+                        //Captura los datos de la tabla en una variable
+                        $datos = ConsultarProductos();
+                        // Iteramos con un while
+                        While($fila = mysqli_fetch_array($datos))
+                        {
+                            echo '
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="card">
+                                        <div style="text-align:center">
+                                            <img class="card-img-top" src="' . $fila["Imagen"] . '" style="width:175px; height: 150px;" margin-top:20px>
+                                        </div>       
+                                        <div class="card-body">
+                                            <h5 class="card-title">' . $fila["Nombre"] . '</h5>
+                                            <p class="card-text">' . $fila["Descripcion"] . '</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                            
+                                    </div>
+                                </div>
+                            ';
+                        }
+                    ?>
+                    </div>
                 </div>
             </div>
         </div>
