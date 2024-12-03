@@ -13,7 +13,7 @@
 
 <body class="page-wrapper">
     <!--  Body Wrapper -->
-    <div  id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed">
 
 
@@ -40,10 +40,10 @@
                             echo '<div class="alert alert-info Centrado ">' . $_POST["txtMensaje"] . '</div>';
                         }
                     ?>
-                    <div class="row">
-                        <?php
+
+                    <?php
                         // Row mide 12
-                        //Captura los datos de la tabla en una variable
+                        //Captura los datos de la tabla en una variable y muestra todos los productos
                         $datos = ConsultarProductos();
                         // Iteramos con un while
                         While($fila = mysqli_fetch_array($datos))
@@ -56,16 +56,21 @@
                                         </div>       
                                         <div class="card-body">
                                             <h5 class="card-title">' . $fila["Nombre"] . '</h5>
-                                            <p class="card-text">' . $fila["Descripcion"] . '</p>
+                                            <p class="card-text" style = "text-align:justify;">' . $fila["Descripcion"] . '</p>
                                             <a href="#" class="btn btn-primary">Go somewhere</a>
                                         </div>
                                             
                                     </div>
                                 </div>
                             ';
+                            
+                           // if (isset($_SESSION["NombreUsuario"]))
+                            //{
+
+                            //}
                         }
                     ?>
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -74,7 +74,7 @@
                                         <div class="mb-3">
                                             <label class="form-label">Imagen</label>
                                             <input type="file" class="form-control" id="txtImagen" name="txtImagen"
-                                            accept="image/png">
+                                            accept="image/png, image/jpeg">
                                         </div>
 
                                         <input type="submit" class="btn btn-primary" value="Procesar"
