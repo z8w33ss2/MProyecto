@@ -62,12 +62,14 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Precio</label>
-                                            <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" required>
+                                            <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" 
+                                            onkeypress="return SoloNumeros(event)" maxlength= "8" required>
                                         </div>
 
                                         <div class="mb-3">
                                             <label class="form-label">Cantidad</label>
-                                            <input type="text" class="form-control" id="txtCantidad" name="txtCantidad" required>
+                                            <input type="text" class="form-control" id="txtCantidad" name="txtCantidad" 
+                                            onkeypress="return SoloNumeros(event)" maxlength= "3" required>
                                         </div>
 
                                         <!--accept="image/png" realiza un filtro para imagenes-->
@@ -93,6 +95,7 @@
         ReferenciasJS();
     ?>
     <script src="../js/RegistrarUsuarios.js"></script>
+    <script src="../js/Comunes.js"></script>
 </body>
 
 </html>

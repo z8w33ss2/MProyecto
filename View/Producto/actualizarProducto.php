@@ -70,6 +70,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Precio</label>
+                                            <!--onkeypress="return SoloNumeros(event)" = valida que el precio solo tenga numeros-->
                                             <input type="text" class="form-control" id="txtPrecio" name="txtPrecio" 
                                             onkeypress="return SoloNumeros(event)"
                                             maxlength= "8" value="<?php echo $datos["Precio"]?>">

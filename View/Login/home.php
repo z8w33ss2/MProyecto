@@ -56,18 +56,32 @@
                                         </div>       
                                         <div class="card-body">
                                             <h5 class="card-title">' . $fila["Nombre"] . '</h5>
-                                            <p class="card-text" style = "text-align:justify;">' . $fila["Descripcion"] . '</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+
+                                            Unidades: ' . $fila["Cantidad"] .' </br>
+                                            Precio: ¢' . number_format($fila["Precio"],2) . '
+
+                                            </br></br>
+                                            <textarea class= "form-control" style="resize:none; border:0px; text-align:justify; padding:0px,10px,0px" rows="5">' . $fila["Descripcion"] . '</textarea>
+                                            </br>';
+
+                                            if (isset($_SESSION["NombreUsuario"]))
+                                            {
+                                                echo '
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input type="number" class="form-control" style="text-align:center"
+                                                        onkeypress="return SoloNumeros(event)" value= "0" min="1" max=' . $fila["Cantidad"] . '>
+                                                    </div>
+                                                    <div class="col-6">
+                                                    <a href="#" style="width:100%" class="btn btn-primary">+ Añadir</a>
+                                                    </div>
+                                                </div>';
+                                            }
+                                            echo '
                                         </div>
-                                            
                                     </div>
                                 </div>
                             ';
-                            
-                           // if (isset($_SESSION["NombreUsuario"]))
-                            //{
-
-                            //}
                         }
                     ?>
 
@@ -77,6 +91,7 @@
         <?php
             ReferenciasJS();
         ?>
+        <script src="../js/Comunes.js"></script>
 </body>
 
 </html>

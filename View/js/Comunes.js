@@ -1,3 +1,4 @@
+// funcion que permite ingresar solo numeros 
 function SoloNumeros(e)
 {
     var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;

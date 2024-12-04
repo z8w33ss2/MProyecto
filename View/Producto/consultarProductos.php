@@ -68,7 +68,7 @@
                                                         echo "<tr>";  
                                                         echo "<td>" . $fila["Consecutivo"]. "</td>";
                                                         echo "<td title='" . $fila["Descripcion"] . "'>" . $fila["Nombre"]. "</td>";
-                                                        echo "<td>" . $fila["Precio"]. "</td>";
+                                                        echo "<td>" . number_format($fila["Precio"],2). "</td>";
                                                         echo "<td>" . $fila["Cantidad"]. "</td>";
                                                         echo "<td><img width='100' height='85' src='" . $fila["Imagen"]. "'></img></td>";
                                                         
