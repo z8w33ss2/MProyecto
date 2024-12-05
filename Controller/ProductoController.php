@@ -5,6 +5,9 @@
     
     include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Model/ProductoModel.php'; // llamado al modelo del usuario
 
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start(); // Crear o leer una variable de sesion VALIDAR 
+    }
 
     function ConsultarProductos()
     {
