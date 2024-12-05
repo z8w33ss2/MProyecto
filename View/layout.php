@@ -151,8 +151,10 @@ function ReferenciasCSS(){
             <!--datatable-->
             <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
             <!--Icons font-awesome 4.7 free-->
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-            </head>';
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css" />
+        </head>';
+            
     }
 
 function ReferenciasJS(){
@@ -163,11 +165,10 @@ function ReferenciasJS(){
         <script src="../js/sidebarmenu.js"></script>
         <script src="../js/app.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-        <!--js de datatable-->
         <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
-        <!--js de datatable-->
         <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
-        ';
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js "></script>
+    ';
 }
 
 ?>
