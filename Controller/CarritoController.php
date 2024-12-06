@@ -16,11 +16,11 @@ if(isset($_POST["btnRegistrarCarrito"]))
 
     if($result == true)
     {
-        header('location: ../../View/Producto/consultarProductos.php');
+        echo'OK';
     }
     else
     {
-        $_POST["txtMensaje"]= "El producto no se ha registrado correctamente";
+        echo'ERROR';
     }
 }
 
