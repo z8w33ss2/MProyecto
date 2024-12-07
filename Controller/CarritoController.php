@@ -24,4 +24,8 @@ if(isset($_POST["btnRegistrarCarrito"]))
     }
 }
 
+function ConsultarCarrito()
+{
+    return ConsultarCarritoModel($_SESSION["ConsecutivoUsuario"]); 
+}
 ?>

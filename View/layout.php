@@ -62,6 +62,21 @@ function MostrarMenu()
                                 </a>
                             </li>';
                         }
+
+                        if (isset($_SESSION["NombreUsuario"])) 
+                        {
+                            echo '
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link" href=" ../Carrito/consultarCarrito.php" aria-expanded="false">
+                                        <span>
+                                            <iconify-icon icon="solar:cart-large-2-bold" class="fs-6">
+                                            </iconify-icon>
+                                        </span>
+                                        <span class="hide-menu">Mi Carrito</span>
+                                    </a>
+                                </li>';
+                        }
+
                         echo '
                         </ul>
                     </nav>
