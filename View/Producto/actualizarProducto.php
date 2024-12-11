@@ -59,7 +59,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Nombre</label>
-                                            <input type="text" class="form-control" id="txNombre" name="txtNombre"
+                                            <input type="text" class="form-control" id="txtNombre" name="txtNombre"
                                                 value="<?php echo $datos["Nombre"]?>">
                                         </div>
 

@@ -4,7 +4,7 @@ function ReferenciasCSS(){
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Sistema Web Miércoles Noche</title>
+            <title>Sistema Web Miércoles Noche<</title>
             <link rel="shortcut icon" type="image/png" href="../images/seodashlogo.png" />
             <link rel="stylesheet" href="../css/styles.min.css" />
             <!--datatable-->
