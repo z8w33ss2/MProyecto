@@ -83,9 +83,9 @@ include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/CarritoContr
                                     </li>
 
                                     <li class="sidebar-item">
-                                        <a class="sidebar-link" href=" ../Carrito/consultarCompras.php" aria-expanded="false">
+                                        <a class="sidebar-link" href=" ../Carrito/consultarFacturas.php" aria-expanded="false">
                                             <span>
-                                                <iconify-icon icon="solar:cart-large-2-bold" class="fs-6">
+                                                <iconify-icon icon="solar:bill-list-bold" class="fs-6">
                                                 </iconify-icon>
                                             </span>
                                             <span class="hide-menu">Mis Compras</span>
@@ -106,6 +106,9 @@ include_once $_SERVER["DOCUMENT_ROOT"] .'/Proyecto_Clase/Controller/CarritoContr
         {
         // Condicional que evalua si se encuentra loggueado
         $usuario = "Invitado"; 
+        $cantidad = "0";
+        $total = "0";
+
         if (isset($_SESSION["NombreUsuario"])) { // variable de sesion
 
             $usuario = $_SESSION["NombreUsuario"];

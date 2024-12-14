@@ -60,8 +60,8 @@
                                                         echo "<tr>";  
                                                         echo "<td>" . $fila["ConsecutivoProducto"] . ' - ' .$fila["Nombre"]. "</td>";
                                                         echo "<td>" . $fila["CantidadDeseada"]. "</td>";
-                                                        echo "<td>" . number_format($fila["PrecioUnitario"],2). "</td>";
-                                                        echo "<td>" . number_format($fila["Total"],2). "</td>";                                      
+                                                        echo "<td>¢ " . number_format($fila["PrecioUnitario"],2). "</td>";
+                                                        echo "<td>¢ " . number_format($fila["Total"],2). "</td>";                                      
                                                         echo '<td>
                                                             
                                                             <button id="btnOpenModal" type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop"
@@ -85,14 +85,16 @@
                                                     <?php echo number_format($_SESSION["TotalCarrito"],2) ?></b></p>
                                         </div>
                                         <div class="col-lg-7">
+                                            <form action="" method="POST">
 
-                                            <?php
-                                                if($_SESSION["TotalCarrito"] != "0")
-                                                {
-                                                    echo '<button type="submit" class="btn btn-outline-primary" style="width:200px">Pagar</button>';
-                                                }
-                                            ?>
-
+                                                <?php
+                                                    if($_SESSION["TotalCarrito"] != "0")
+                                                    {
+                                                        echo '<button type="submit" class="btn btn-outline-primary" style="width:200px"
+                                                        id = "btnPagarCarrito" name = "btnPagarCarrito">Pagar</button>';
+                                                    }
+                                                ?>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

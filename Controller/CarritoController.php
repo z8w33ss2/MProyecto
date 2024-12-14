@@ -66,5 +66,30 @@ if(isset($_POST["btnRemoverProductoCarrito"]))
     }
 }
 
+if(isset($_POST["btnPagarCarrito"]))
+{
+    $result= PagarCarritoModel($_SESSION["ConsecutivoUsuario"]);
+
+    if($result == true)
+    {
+        // Sobre escribe la variable de sesion
+        header('location: ../../View/Login/home.php');
+    }
+    else
+    {
+        $_POST["txtMensaje"]= "No fue posible pagar su carrito";
+    }
+}
+
+
+function ConsultarFacturas()
+{
+    return ConsultarFacturasModel($_SESSION["ConsecutivoUsuario"]); 
+}
+
+function ConsultarDetalleFactura($id)
+{
+    return ConsultarDetalleFacturaModel($id); 
+}
 
 ?>

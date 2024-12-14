@@ -57,8 +57,8 @@
                                         <div class="card-body">
                                             <h5 class="card-title">' . $fila["Nombre"] . '</h5>
 
-                                            Unidades: ' . $fila["Cantidad"] .' </br>
-                                            Precio: ¢' . number_format($fila["Precio"],2) . '
+                                            Unidades Disponibles: ' . $fila["Cantidad"] .' </br>
+                                            Precio Unitario: ¢' . number_format($fila["Precio"],2) . '
 
                                             </br></br>
                                             <textarea class= "form-control" style="resize:none; border:0px; text-align:justify; padding:0px,10px,0px" rows="5" readonly="true">' . $fila["Descripcion"] . '</textarea>
@@ -66,16 +66,27 @@
 
                                             if (isset($_SESSION["NombreUsuario"]))
                                             {
-                                                echo '
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <input id=' . $fila["Consecutivo"] . ' type="number" class="form-control" style="text-align:center"
-                                                        onkeypress="return SoloNumeros(event)" value= "0" min="1" max=' . $fila["Cantidad"] . '>
-                                                    </div>
-                                                    <div class="col-6">
-                                                    <a onclick="RegistrarCarritoJS(' . $fila["Consecutivo"] . ', ' . $fila["Cantidad"]  . ');" style="width:100%" class="btn btn-primary">+ Añadir</a>
-                                                    </div>
-                                                </div>';
+                                                if ($fila["Cantidad"] > 0) {
+                                                    echo '
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input id=' . $fila["Consecutivo"] . ' type="number" class="form-control" style="text-align:center"
+                                                                onkeypress="return false" value= "0" min="1" max=' . $fila["Cantidad"] . '>
+                                                            </div>
+                                                            <div class="col-6">
+                                                            <a onclick="RegistrarCarritoJS(' . $fila["Consecutivo"] . ', ' . $fila["Cantidad"]  . ');" style="width:100%" class="btn btn-primary">+ Añadir</a>
+                                                            </div>
+                                                        </div>';
+                                                }
+                                                else
+                                                {
+                                                    echo '
+                                                        <div class="row">
+                                                            <div class="col-12 text-center">
+                                                                <p style="color:red; font-weight:bold;">AGOTADO</p>
+                                                            </div>
+                                                        </div>';
+                                                }
                                             }
                                             echo '
                                         </div>
